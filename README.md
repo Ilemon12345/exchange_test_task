@@ -2,6 +2,8 @@
 
 This application is not supposed to be run in cluster env so it is not used distributed scheduling(quartz) or state synchoniztion via messaging (kafka)
 
+Also, fixer io only have EUR base for free plan that's why we pass it for all currencies ... 
+
 # prerequsite
 In order to run up u need: 
 - run docker server 
