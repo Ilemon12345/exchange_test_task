@@ -8,7 +8,7 @@ In order to run up u need:
 - have acces key for fixer.io 
 
 # how to run
-- FIXER_API_KEY=api key ./gradlew  bootRun  (it's not needed to run compose.yml separatly, spring boot does it for u)
+- FIXER_API_KEY=fixer api key ./gradlew  bootRun  (it's not needed to run compose.yml separatly, spring boot does it for u)
 - run test ./gradlew clean test --info 
 
 # API: 
