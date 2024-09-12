@@ -12,25 +12,25 @@ In order to run up u need:
 - run test ./gradlew clean test --info 
 
 # API: 
-1. Get available currencies 
+# 1. Get available currencies 
 GET /api/v1/exchange/currency
-# Response: 
+ Response: 
 [
     "EUR",
     "USD"
 ]
 
-2. Add currency 
+# 2. Add currency 
 POST /api/v1/exchange/currency
-# Request: 
+Request: 
 {
     "currency": "EUR"
 }
-# Response: 200
+Response: 200
 
-3. Get reates 
+# 3. Get reates 
 Get api/v1/exchange/currency/rates?currency=USD
-# Response: 
+Response: 
 [
     {
         "symbol": "AED",
