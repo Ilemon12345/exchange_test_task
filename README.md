@@ -8,14 +8,13 @@ In order to run up u need:
 - have acces key for fixer.io 
 
 # how to run
-- set FIXER_API_KEY as env var
 - FIXER_API_KEY=api key ./gradlew  bootRun  (it's not needed to run compose.yml separatly, spring boot does it for u)
 - run test ./gradlew clean test --info 
 
 # API: 
 1. Get available currencies 
 GET /api/v1/exchange/currency
-Response: 
+# Response: 
 [
     "EUR",
     "USD"
@@ -23,15 +22,15 @@ Response:
 
 2. Add currency 
 POST /api/v1/exchange/currency
-Request: 
+# Request: 
 {
     "currency": "EUR"
 }
-Response: 200
+# Response: 200
 
 3. Get reates 
 Get api/v1/exchange/currency/rates?currency=USD
-Response: 
+# Response: 
 [
     {
         "symbol": "AED",
