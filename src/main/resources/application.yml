@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: exchange
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exchange
+    username: myuser
+    password: secret
+  liquibase:
+    change-log=classpath:db/changelog/db.changelog-master.yaml
+
+rates-provider:
+  fixer:
+    url: http://data.fixer.io/api/latest
+    apiKey: ${FIXER_API_KEY}

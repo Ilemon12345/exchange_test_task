@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Yevhenii Y
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: currency
+      changes:
+        - createTable:
+            tableName: currency
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: currency
+                  type: varchar(5)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rates
+                  type: jsonb
+              - column:
+                  name: creation_date
+                  type: date
+
+        - createIndex:
+            clustered: true
+            columns:
+              - column:
+                  name: currency
+              - column:
+                  descending: true
+                  name: creation_date
+            indexName: idx_currency_creationDate
+            tableName: currency
+
