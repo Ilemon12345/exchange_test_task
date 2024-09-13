@@ -39,7 +39,7 @@ public class CurrencyService {
 
     public void addCurrencies(List<Currency> currencies) {
         currencyListCache = currencyRepository.saveAll(currencies)
-                .stream().collect(Collectors.toMap(Currency::getCurrency, Function.identity()));
+                .stream().collect(Collectors.toConcurrentMap(Currency::getCurrency, Function.identity()));
     }
 
     public List<String> getAllCurrencies() {
